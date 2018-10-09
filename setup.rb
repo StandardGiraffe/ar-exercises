@@ -41,4 +41,9 @@ ActiveRecord::Schema.define do
   end
 end
 
-puts 'Setup DONE'
+puts "Setup DONE\n\n"
+puts "Running exercises:\n\n"
+
+require_relative "./exercises/exercise_1"
+
+# binding.pry
