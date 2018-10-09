@@ -5,7 +5,7 @@ puts "----------"
 
 # Your code goes below here ...
 
-burnaby = Store.create(
+@burnaby = Store.create(
   name:           "Burnaby",
   annual_revenue: 300_000,
   mens_apparel:   true,
@@ -27,3 +27,4 @@ gastown = Store.create(
   )
 
 puts "After instantiation, there are #{Store.count} stores in the table."
+
