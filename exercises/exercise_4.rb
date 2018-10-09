@@ -7,3 +7,39 @@ puts "Exercise 4"
 puts "----------"
 
 # Your code goes here ...
+
+@surrey = Store.create(
+  name:           "Surrey",
+  annual_revenue: 224_000,
+  mens_apparel:   false,
+  womens_apparel: true
+  )
+
+@whistler = Store.create(
+  name:           "Whistler",
+  annual_revenue: 1_900_000,
+  mens_apparel:   true,
+  womens_apparel: false
+  )
+
+@yaletown = Store.create(
+  name:           "Yaletown",
+  annual_revenue: 430_000,
+  mens_apparel:   true,
+  womens_apparel: true
+  )
+
+@mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
+@womens_stores_poor = Store.where(mens_apparel: false, womens_apparel: true).where("annual_revenue < 1000000")
+
+# puts @mens_stores.inspect
+
+puts "\n\nMen's Apparel Stores:"
+@mens_stores.each do |store|
+  puts "Store: #{store.name}; Annual Revenue: #{store.annual_revenue}"
+end
+
+puts "\n\nWomen's Apparel Stores making less than $1,000,000:"
+@womens_stores_poor.each do |store|
+  puts "Store: #{store.name}; Annual revenue: #{store.annual_revenue}"
+end
