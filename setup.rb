@@ -45,8 +45,8 @@ puts "Setup DONE\n\n"
 puts "Running exercises:\n\n"
 
 # require_relative "./exercises/exercise_1"
-
-require_relative "./exercises/exercise_2"
+# require_relative "./exercises/exercise_2"
+require_relative "./exercises/exercise_3"
 
 
 # binding.pry
